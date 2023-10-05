@@ -1,20 +1,23 @@
 dataBaseBuku = []
+listBukuDipinjam = []
 statusBuku = {}
 
 
 def statusBukuDiPinjam(buku):
-    for user, bukuDiPinjam in statusBuku.items():
-        if bukuDiPinjam == buku:
+    for user, bukuDiPinjam in enumerate(listBukuDipinjam):
+        if bukuDiPinjam == buku or bukuDiPinjam == user:
             return True
     return False
 
 
 def kembalikanBuku(userName):
     if userName in statusBuku:
-        hapusStatus = statusBuku.pop(userName)
-        print(f"Buku {hapusStatus[0]} telah dikembalikan")
+        listBukuDipinjam.pop()
+        statusBuku[userName] ={userName:listBukuDipinjam} 
+        print(f"Buku telah dikembalikan")
+        return user(userName)
     else:
-        print("Tidak ada buku yang dipinjam")
+        return print("Tidak ada buku yang dipinjam")
 
 
 def pinjamBuku(userName):
@@ -26,31 +29,31 @@ def pinjamBuku(userName):
     if pilihBuku >= 0 or pilihBuku < len(dataBaseBuku):
         bukuDiPinjam = dataBaseBuku[pilihBuku]
         if not statusBukuDiPinjam(bukuDiPinjam):
-            statusBuku[userName] = bukuDiPinjam
-            print(f"Buku berhasil dipinjam")
+            listBukuDipinjam.append(bukuDiPinjam)
+            statusBuku[userName] = {userName:listBukuDipinjam}
+            print(f"Buku {bukuDiPinjam[0]} berhasil dipinjam")
         else:
-            return print("Buku sudah dipinjam oleh user lain")
+            print("Buku sudah dipinjam oleh user lain")
+            return main()
     else:
         return print("Buku tidak ditemukan!")
-    print(statusBuku.keys(), type(statusBuku))
-    print(statusBuku[userName], type(statusBuku))
-    user(userName)
+    return user(userName)
 
 
 def inputBuku(judulBuku, namaPenulis, adminName):
-    print("Format input buku; judul; nama penulis ")
+    print("Buku berhasil ditambahkan")
     dataBaseBuku.append((judulBuku, namaPenulis))
-    admin(adminName)
+    return admin(adminName)
 
 
 def daftarBukuYangDipinjam(userName):
     print("\n\nDaftar Buku yang Dipinjam")
-    for index in len(statusBuku):
-        if userName == index:
-            print(f"{index}. Buku = {statusBuku[index]}")
-        else:
-            break
-
+    if statusBuku and listBukuDipinjam:
+        daftarbuku =  statusBuku[userName][userName]
+        print("Buku = ", str(daftarbuku)[1:-1])
+    else:
+        print("Belum ada peminjaman")
+    return user(userName)
 
 def daftarBuku():
     print("\n\nDaftar Buku: ")
@@ -86,7 +89,7 @@ def user(userName):
         daftarBuku()
         pinjamBuku(userName)
     elif pilihMenu == "kembalikan buku" or pilihMenu == "2":
-        print("kembalikan")
+        kembalikanBuku(userName)
     elif pilihMenu == "buku yang dipinjam" or pilihMenu == "3":
         daftarBukuYangDipinjam(userName)
     elif pilihMenu == "kembali" or pilihMenu == "4":
