@@ -40,7 +40,10 @@ The project is structured as follows:
 
 - [`Modul 1` contains Modul 1 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul1)
 - [`Modul 2` contains Modul 2 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul2)
-- [`Demo` contains demo.](https://github.com/Fallid/PemrogramanWeb/tree/main/Demo)
+- [`Modul 3` contains Modul 3 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul3)
+- [`Modul 4` contains Modul 4 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul4)
+- [`Modul 5` contains Modul 5 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul5)
+- [`Modul 6` contains Modul 6 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul6)
 
 ---
 
