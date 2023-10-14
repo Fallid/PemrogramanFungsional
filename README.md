@@ -1,4 +1,4 @@
-﻿# Pemrograman Web
+﻿# Pemrograman Functional
 
 This repository contains the source code of the Fungtion Programming Development project using Python 3, etc. Also, made for the Function Programming Development course at the University of Muhammadiyah Malang.
 
@@ -24,7 +24,7 @@ This repository contains the source code of the Fungtion Programming Development
 
 ### Prerequisites
 
-- Python 3
+- Python 3.9.11 or higher
 - IDE (VSCode, etc.)
 
 ### Installing
@@ -38,8 +38,8 @@ This repository contains the source code of the Fungtion Programming Development
 
 The project is structured as follows:
 
-- [`Assets` contains assets for project](https://github.com/Fallid/PemrogramanWeb/tree/main/Assets)
-- [`CodeLab` contains codelab.](https://github.com/Fallid/PemrogramanWeb/tree/main/CodeLab)
+- [`Modul 1` contains Modul 1 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul1)
+- [`Modul 2` contains Modul 2 CodeLab and Demo](https://github.com/Fallid/PemrogramanFungsional/tree/main/Modul2)
 - [`Demo` contains demo.](https://github.com/Fallid/PemrogramanWeb/tree/main/Demo)
 
 ---
