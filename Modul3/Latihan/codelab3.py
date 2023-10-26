@@ -4,8 +4,8 @@ _copyright_ = "Copyright 2023, malang"
 random_list = [105, 3.1, "Hello", 737, "Python", 2.7, "World", 412, 5.5, "AI"]
 
 # Fungsi untuk memeriksa apakah suatu nilai adalah integer
-def is_integer(value):
-    return isinstance(value, int)
+# def is_integer(value):
+#     return isinstance(value, int)
 
 # Fungsi untuk memetakan nilai integer menjadi ratusan, puluhan, dan satuan
 def map_integer(value):
@@ -16,10 +16,10 @@ def map_integer(value):
 
 # Memisahkan nilai float, int, dan string
 float_values = list(filter(lambda x: isinstance(x, float), random_list))
-int_values = list(filter(is_integer, random_list))
+int_values = list(filter(lambda value: isinstance(value, int), random_list))
 string_values = list(filter(lambda x: isinstance(x, str), random_list))
 # dictionary = {}
-List = []
+# List = []
 
 # Mencetak hasil
 def printHasilFloat(float_values):    

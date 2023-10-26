@@ -9,15 +9,13 @@ def split_data(data):
     return integers
 
 # Menggunakan filter untuk mengambil nilai integer
-nilai_integer = list(filter(None, map(split_data, data)))
+data_integer = list(filter(None, map(split_data, data)))
 
 # Mencetak nilai integer dalam tiga baris terpisah
-def sublist():
-    for sublist in nilai_integer:
-        print(sublist)
-
 def main():
-    sublist()
+    for number in data_integer:
+        print(number)
+    
 
 if __name__ == "__main__":
     main()
