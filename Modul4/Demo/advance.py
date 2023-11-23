@@ -62,14 +62,14 @@ def before_line_equation(p1,p2):
 
 def main():
     while True:
-        titik_x = titik_awal_x("Nilai titik X: ")
-        titik_y = titik_awal_y("Nilai titik Y: ")
-        titik_z = titik_awal_z("Nilai titik Z: ")
-        titik_tx = nilai_tx("Nilai tx: ")
-        titik_ty = nilai_ty("Nilai ty: ")
-        titik_sx = nilai_sx("Nilai sekala sumbu x: ")
-        titik_sy = nilai_sy("Nilai sekala sumbu y: ")
-        radius = rotasi_x("Nilai derajat sumbu x: ")
+        titik_x = titik_awal_x("Titik A(x, y) \nNilai titik X: ")
+        titik_y = titik_awal_y(f"\nTitik A({titik_x}, y) \nNilai titik Y: ")
+        titik_z = titik_awal_z(f"\nTitik B({titik_y}, z) \nNilai titik Z: ")
+        titik_tx = nilai_tx("\nNilai tx: ")
+        titik_ty = nilai_ty("\nNilai ty: ")
+        titik_sx = nilai_sx("\nNilai sekala sumbu x: ")
+        titik_sy = nilai_sy("\nNilai sekala sumbu y: ")
+        radius = rotasi_x("\nNilai derajat sumbu x: ")
         break
     
     @translasi(titik_tx, titik_ty)
@@ -80,7 +80,7 @@ def main():
         C = p1[1] - M * p1[0]
         return f"{M:.2f}x, {C:.2f}"
     
-    print(f"Persamaan garis melalui titik A{titik_x, titik_y}, B{titik_y, titik_z}")
+    print(f"\n\nPersamaan garis melalui titik A{titik_x, titik_y}, B{titik_y, titik_z}")
     print(before_line_equation(point(titik_x, titik_y), point(titik_y, titik_z)))
     print("\n\nPersamaan garis baru setelah transformasi: \ny = " ,line_equation_of(point(titik_x,titik_y), point(titik_y,titik_z)))
     
